@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the website responsive on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Internship Portal</title>
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="task-16.css">
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo">
+            InternConnect
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#internships">Internships</a>
+            <a href="#applications">Applications</a>
+        </nav>
+    </header>
+    <!-- ================= HOME ================= -->
+    <section id="home" class="hero">
+        <div>
+            <h1>
+                Find Your Internship
+            </h1>
+            <p>
+                Explore opportunities and build your career.
+            </p>
+            <a href="#internships" class="hero-button">
+                Explore Internships
+            </a>
+        </div>
+    </section>
+    <!-- ================= INTERNSHIPS ================= -->
+    <section id="internships">
+        <h2>Available Internships</h2>
+        <!-- Search and filter -->
+        <div class="search-area">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search internships..."
+            >
+            <select id="categoryFilter">
+                <option value="all">
+                    All Categories
+                </option>
+                <option value="Technology">
+                    Technology
+                </option>
+                <option value="Marketing">
+                    Marketing
+                </option>
+                <option value="Finance">
+                    Finance
+                </option>
+                <option value="Design">
+                    Design
+                </option>
+            </select>
+        </div>
+        <!-- Internship cards will be added by JavaScript -->
+        <div
+            id="internshipList"
+            class="internship-container"
+        ></div>
+    </section>
+    <!-- ================= APPLICATION FORM ================= -->
+    <section id="applicationSection">
+        <h2>Apply for Internship</h2>
+        <form id="applicationForm">
+            <label for="studentName">
+                Student Name
+            </label>
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your name"
+                required
+            >
+            <label for="studentEmail">
+                Email
+            </label>
+            <input
+                type="email"
+                id="studentEmail"
+                placeholder="Enter your email"
+                required
+            >
+            <label for="selectedInternship">
+                Internship
+            </label>
+            <input
+                type="text"
+                id="selectedInternship"
+                readonly
+                required
+            >
+            <label for="resume">
+                Resume Link
+            </label>
+            <input
+                type="url"
+                id="resume"
+                placeholder="https://..."
+                required
+            >
+            <button type="submit">
+                Submit Application
+            </button>
+        </form>
+        <!-- Application confirmation -->
+        <div id="applicationMessage"></div>
+    </section>
+    <!-- ================= APPLICATION TRACKING ================= -->
+    <section id="applications">
+        <h2>Track Applications</h2>
+        <div id="applicationList">
+            <p class="no-application">
+                No applications submitted yet.
+            </p>
+        </div>
+    </section>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h3>InternConnect</h3>
+        <p>
+            Connecting students with internship opportunities.
+        </p>
+        <p>
+            © 2026 InternConnect
+        </p>
+    </footer>
+    <!-- Connect JavaScript -->
+    <script src="task-16.js"></script>
+</body>
+</html>
